@@ -11,5 +11,12 @@ func main() {
 	// var ps = spaceadventure.PlanetarySystem{"Salad system"}
 	// spaceadventure.Start(ps)
 	
-	spaceadventure.Start(spaceadventure.PlanetarySystem{"salad System"})
+	spaceadventure.Start(
+		spaceadventure.PlanetarySystem{
+			Name: "Salad System", Planets: []spaceadventure.Planet{
+				spaceadventure.Planet{"Tatooine", "Desert Planet"}
+			},
+		},
+	)
+
 }

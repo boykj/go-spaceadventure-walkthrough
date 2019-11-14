@@ -5,12 +5,13 @@ import "fmt"
 func Start(planetarySystem PlanetarySystem) {
 	printWelcome(planetarySystem)
 	printGreeting(responseToPrompt("Please Enter your name"))
+	fmt.Println("Lets adventure")
 	travel(promptForRandomOrSpecificDestination("Would you like to randomly travel to a planet?"))
 }
 
-func printWelcome() {
-	fmt.Println("Welcome to the %s!", planetarySystem.Name)
-	fmt.Println("There are 8 planets to explore.")
+func printWelcome(planetarySystem PlanetarySystem) {
+	fmt.Println("Welcome to the %s!\n", planetarySystem.Name)
+	fmt.Println("There are %d planets to explore.\n", planetarySystem.NumberOfPlanets())
 }
 
 func getName() string{
